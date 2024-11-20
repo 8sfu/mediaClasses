@@ -135,7 +135,7 @@ int main() {
     
     char input[20];
     cin.getline(input,20);
-    cout << "INPUT " << input << endl;
+    //cout << "INPUT " << input << endl;
     
     if(!strcmp(input,"ADD")){
       cout << "Would you like to add music, a game, or a movie?" << endl;
@@ -156,13 +156,16 @@ int main() {
 	m->createMedia();
 	mediaVector.push_back(m);
       }
+      cout << endl;
     }
+    
     else if(!strcmp(input,"SEARCH")){
       cout << "would you like to search by title or by year?" << endl;
       cin.getline(input,20);
       if(!strcmp(input,"TITLE")){
 	cout << "what title would you like to find?" << endl;
 	cin.getline(input,20);
+	cout << "you are searching for " << input << endl;
 	int n = 0;
 	for(Media* m : mediaVector){
 	  if(!strcmp(m->title,input)){
@@ -171,8 +174,11 @@ int main() {
 	}
 	if(n == 0){
 	  cout << "There are no titles with that name." << endl;
+	} else {
+	  cout << "There are " << n << " titles with that name" << endl;
 	}
       }
+      
       else if(!strcmp(input,"YEAR")){
 	cout << "what year was the media produced?" << endl;
 	int numInput;
@@ -180,22 +186,56 @@ int main() {
 	int n = 0;
 	for(Media* m : mediaVector) {
 	  if(m->year == numInput){
-	    cout << n << " titles were produced in " << input << endl;
+	    n++;
 	  }
 	}
 	if(n == 0){
-	  cout << "None of the titles were produced in " << input << endl;
+	  cout << "None of the media was produced in " << numInput << endl;
+	} else {
+	  cout << n << " media found produced in " << numInput << endl;
 	}
       }
-    }
-    else if(!strcmp(input,"DELETE")){
+      
+    } else if(!strcmp(input,"DELETE")){
       cout << "would you like to delete by title or by year?" << endl;
       cin.getline(input,20);
       if(!strcmp(input,"TITLE")){
-	
+	cout << "What title would you like to delete?" << endl;
+	cin.getline(input,20);
+	vector<Media*>::iterator it;
+	int n = 0;
+	for(it = mediaVector.begin(); it != mediaVector.end(); ++it) {
+	  if(!strcmp((*it)->title,input)){
+	    mediaVector.erase(it);
+	    --it;
+	    n++;
+	  }
+	}
+	if(!n){
+	  cout << "There were no titles named " << input << endl;
+       	} else {
+	  cout << n << " media named " << input << " deleted." << endl;
+	}
       }
       else if(!strcmp(input,"YEAR")){
-	
+	cout << "What year was the media produced in?" << endl;
+	int numInput;
+	cin >> numInput;
+	fixInput();
+	vector<Media*>::iterator it;
+	int n = 0;
+	for(it = mediaVector.begin(); it != mediaVector.end(); ++it) {
+	  if((*it)->year == numInput){
+	    mediaVector.erase(it);
+	    --it;
+	    n++;
+	  }
+	}
+	if(!n){
+          cout << "There were no titles produced in " << numInput << endl;
+        } else {
+          cout << n << " media produced in " << numInput << " deleted." << endl;
+        }
       }
     }
     else if(!strcmp(input,"QUIT")){
