@@ -1,13 +1,13 @@
 #ifndef MUSIC_H
 #define MUSIC_H
 #include <cstring>
-
+#include "media.h"
 
 class Music : public Media {
  public:
-  char* artist;
+  char* artist = new char[20];
   double duration;
-  char* publisher;
+  char* publisher = new char[20];
   void createMedia();
 };
 
