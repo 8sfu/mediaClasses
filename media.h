@@ -4,10 +4,11 @@
 
 class Media {
  public:
-  char* title = new char[80];
+  char* title = new char[20];
   int year;
   void fixInput();
   virtual void createMedia(); //MAKE VIRTUAL AGAIN
+  virtual void print();
   virtual ~Media();
 };
 

@@ -4,7 +4,7 @@
 
 using namespace std;
 
-void createMedia(){
+void Movie::createMedia(){
   cout << "What is this movie titled?" << endl;
   cin.getline(title,20);
 
@@ -25,4 +25,8 @@ void createMedia(){
 
   cout << endl;
   return;
+}
+
+void Movie::print(){
+  cout << "Title: " << title << ",  Release date: " << year << ",  Director: " << director << ",  Duration: " << duration << ",  Rating: " << rating << endl;
 }

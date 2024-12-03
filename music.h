@@ -9,6 +9,7 @@ class Music : public Media {
   double duration;
   char* publisher = new char[20];
   void createMedia();
+  void print();
 };
 
 #endif

@@ -119,7 +119,8 @@ int main() {
         int n = 0;
         for(it = mediaVector.begin(); it != mediaVector.end(); ++it) {
           if((*it)->year == numInput){
-            mediaVector.erase(it);
+	    (*it)->print();
+	    mediaVector.erase(it);
             --it;
             n++;
           }

@@ -4,7 +4,7 @@
 
 using namespace std;
 
-void createMedia(){
+void Music::createMedia(){
   cout << "What is this music titled?" << endl;
   cin.getline(title,20);
 
@@ -21,5 +21,9 @@ void createMedia(){
 
   cout << "Who published this music?" << endl;
   cin.getline(publisher,20);
+  return;
+}
+
+void Music::print() {
   return;
 }

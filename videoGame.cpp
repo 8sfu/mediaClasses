@@ -4,7 +4,7 @@
 
 using namespace std;
 
-void createMedia(){
+void VideoGame::createMedia(){
   cout << "What is this video game titled?" << endl;
   cin.getline(title,20);
 
@@ -18,5 +18,9 @@ void createMedia(){
   cout << "What is this video game rated?" << endl;
   cin >> rating;
   fixInput();
+  return;
+}
+
+void VideoGame::print(){
   return;
 }
