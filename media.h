@@ -6,8 +6,8 @@ class Media {
  public:
   char* title;
   int year;
-  virtual void createMedia(){} //MAKE VIRTUAL AGAIN
-
+  virtual void createMedia(); //MAKE VIRTUAL AGAIN
+  virtual ~Media();
 };
 
 #endif

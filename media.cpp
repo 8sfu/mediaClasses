@@ -4,3 +4,9 @@
 
 using namespace std;
 
+virtual void createMedia(){
+  return;
+}
+
+virtual ~Media(){
+}
