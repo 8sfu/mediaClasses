@@ -8,7 +8,7 @@ class Media {
   int year;
   void fixInput();
   virtual void createMedia(); //MAKE VIRTUAL AGAIN
-  virtual void print();
+  virtual void print(int n);
   virtual ~Media();
 };
 

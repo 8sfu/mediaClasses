@@ -8,7 +8,7 @@ class VideoGame : public Media {
   char* publisher = new char[20];
   double rating;
   void createMedia();
-  void print();
+  void print(int n);
 };
 
 #endif
