@@ -10,6 +10,7 @@ class Music : public Media {
   char* publisher = new char[20];
   void createMedia();
   void print(int n);
+  ~Music();
 };
 
 #endif

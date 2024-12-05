@@ -10,6 +10,7 @@ class Movie : public Media {
   float rating;
   void createMedia();
   void print(int n);
+  ~Movie();
 };
 
 #endif
