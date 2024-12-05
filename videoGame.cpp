@@ -15,12 +15,13 @@ void VideoGame::createMedia(){
   cout << "Who published this video game?" << endl;
   cin.getline(publisher,20);
 
-  cout << "What is this video game rated?" << endl;
+  cout << "What is this video game rated? (Input as float)" << endl;
   cin >> rating;
   fixInput();
   return;
 }
 
-void VideoGame::print(){
+void VideoGame::print(int n){
+  cout << "Number: " << n << ",  Title: " << title << ",  Release date: " << year << ",  Publisher: " << publisher << ",  Rating: " << rating << endl;
   return;
 }

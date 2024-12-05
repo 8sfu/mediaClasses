@@ -15,11 +15,11 @@ void Movie::createMedia(){
   cout << "Who directed this movie?" << endl;
   cin.getline(director,20);
 
-  cout << "How long is this movie" << endl;
+  cout << "How long is this movie? (Input as float)" << endl;
   cin >> duration;
   fixInput();
 
-  cout << "What is this movie rated?" << endl;
+  cout << "What is this movie rated? (Input as float)" << endl;
   cin >> rating;
   fixInput();
 
@@ -27,6 +27,7 @@ void Movie::createMedia(){
   return;
 }
 
-void Movie::print(){
-  cout << "Title: " << title << ",  Release date: " << year << ",  Director: " << director << ",  Duration: " << duration << ",  Rating: " << rating << endl;
+void Movie::print(int n){
+  cout << "Number: " << n << ",  Title: " << title << ",  Release date: " << year << ",  Director: " << director << ",  Duration: " << duration << ",  Rating: " << rating << endl;
+  return;
 }

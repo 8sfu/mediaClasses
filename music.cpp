@@ -15,15 +15,16 @@ void Music::createMedia(){
   cout << "Who created this music?" << endl;
   cin.getline(artist,20);
 
-  cout << "How long is this music?" << endl;
+  cout << "How long is this music? (Input as float)" << endl;
   cin >> duration;
   fixInput();
 
-  cout << "Who published this music?" << endl;
+  cout << "Who published this music? (Input as float)" << endl;
   cin.getline(publisher,20);
   return;
 }
 
-void Music::print() {
+void Music::print(int n){
+  cout << "Number: " << n << ",  Title: " << title << ",  Release date: " << year << ", Artist: " << artist << ",  Publisher: " << publisher << endl;
   return;
 }

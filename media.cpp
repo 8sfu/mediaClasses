@@ -23,7 +23,7 @@ void Media::createMedia(){
   return;
 }
 
-void Media::print(){
+void Media::print(int n){
   return;
 }
 
