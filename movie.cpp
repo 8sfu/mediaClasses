@@ -31,3 +31,9 @@ void Movie::print(int n){
   cout << "Number: " << n << ",  Title: " << title << ",  Release date: " << year << ",  Director: " << director << ",  Duration: " << duration << ",  Rating: " << rating << endl;
   return;
 }
+
+Movie::~Movie(){
+  delete title;
+  delete director;
+  return;
+}

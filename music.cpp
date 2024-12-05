@@ -28,3 +28,10 @@ void Music::print(int n){
   cout << "Number: " << n << ",  Title: " << title << ",  Release date: " << year << ", Artist: " << artist << ",  Publisher: " << publisher << endl;
   return;
 }
+
+Music::~Music(){
+  delete title;
+  delete artist;
+  delete publisher;
+  return;
+}

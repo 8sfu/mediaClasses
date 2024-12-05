@@ -25,3 +25,9 @@ void VideoGame::print(int n){
   cout << "Number: " << n << ",  Title: " << title << ",  Release date: " << year << ",  Publisher: " << publisher << ",  Rating: " << rating << endl;
   return;
 }
+
+VideoGame::~VideoGame(){
+  delete title;
+  delete publisher;
+  return;
+}
